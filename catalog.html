@@ -5,7 +5,8 @@
     <title>nerds</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
   </head>
   <body class="page-body">
@@ -18,7 +19,7 @@
           <ul class="site-navigation">
             <li><a class="navigation-link" href="blank.html">Студия</a></li>
             <li><a class="navigation-link" href="blank.html">Клиенты</a></li>
-            <li><a class="navigation-link" href="catalog.html">Магазин</a></li>
+            <li><a class="navigation-link active" href="catalog.html">Магазин</a></li>
             <li><a class="navigation-link" href="blank.html">Контакты</a></li>
           </ul>
           <div class="user-navigation">
@@ -41,8 +42,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" aria-label="минимальная цена" tabindex="0"></div>
+                  <div class="toggle toggle-max" aria-label="максимальная цена" tabindex="0"></div>
                 </div>
                 <div class="price-controls">
                   <label for="min-price" class="min-price">
@@ -61,23 +62,23 @@
                   <ul class="reset-list">
                     <li>
                       <label  class="radio-label" for="adaptive">
-                        <input class="radio-input visually-hidden" type="radio" name="product-group" value="adaptive" id="adaptive" checked>
-                        <span class="radio-marker"></span>
-                        <span>Адаптивная</span>
+                      <input class="radio-input visually-hidden" type="radio" name="product-group" value="adaptive" id="adaptive" checked disabled>
+                      <span class="radio-marker"></span>
+                      <span>Адаптивная</span>
                       </label>
                     </li>
                     <li>
                       <label  class="radio-label" for="fix">
-                        <input class="radio-input visually-hidden" type="radio" name="product-group" value="fix" id="fix">
-                        <span class="radio-marker"></span>
-                        <span>Фиксированная</span>
+                      <input class="radio-input visually-hidden" type="radio" name="product-group" value="fix" id="fix">
+                      <span class="radio-marker"></span>
+                      <span>Фиксированная</span>
                       </label>
                     </li>
                     <li>
                       <label  class="radio-label" for="rubber">
-                        <input class="radio-input visually-hidden" type="radio" name="product-group" value="rubber" id="rubber">
-                        <span class="radio-marker"></span>
-                        <span>Резиновая</span>
+                      <input class="radio-input visually-hidden" type="radio" name="product-group" value="rubber" id="rubber">
+                      <span class="radio-marker"></span>
+                      <span>Резиновая</span>
                       </label>
                     </li>
                   </ul>
@@ -86,42 +87,42 @@
               <fieldset class="checkbox">
                 <legend>Особенности</legend>
                 <div class="checkbox">
-                  <label class="filter-checkbox">
-                    Слайдер
-                    <input class="filter-input-checkbox" type="checkbox">
-                    <span class="checkbox-marker"></span>
+                  <label class="filter-checkbox" for="slider">
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox" id="slider" checked disabled>
+                  <span>Слайдер</span>
+                  <span class="checkbox-marker"></span>
                   </label>
                   <label class="filter-checkbox">
-                    Блок преимуществ
-                    <input class="filter-input-checkbox" type="checkbox">
-                    <span class="checkbox-marker"></span>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox">
+                  <span>Блок преимуществ</span>
+                  <span class="checkbox-marker"></span>
                   </label>
                   <label class="filter-checkbox">
-                    Новости
-                    <input class="filter-input-checkbox" type="checkbox">
-                    <span class="checkbox-marker"></span>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox">
+                  <span>Новости</span>
+                  <span class="checkbox-marker"></span>
                   </label>
                   <label class="filter-checkbox">
-                    Галерея
-                    <input class="filter-input-checkbox" type="checkbox">
-                    <span class="checkbox-marker"></span>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox">
+                  <span>Галерея</span>
+                  <span class="checkbox-marker"></span>
                   </label>
                   <label class="filter-checkbox">
-                    Корзина
-                    <input class="filter-input-checkbox" type="checkbox">
-                    <span class="checkbox-marker"></span>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox">
+                  <span>Корзина</span>
+                  <span class="checkbox-marker"></span>
                   </label>
                 </div>
               </fieldset>
             </div>
-            <button class="button-show" type="submit">Показать</button>
+            <button class="button-show" type="submit"><span>Показать</span></button>
           </form>
         </section>
         <div class="sorting-container">
           <div class="filter-container reset-list">
             <p class="form-filter">Сортировать:</p>
             <ul class="sorting-list reset-list">
-              <li><a href="#" class="form-filter1"> По цене</a></li>
+              <li><a href="#" class="form-filter1 one"> По цене</a></li>
               <li><a href="#" class="form-filter1 one"> По типу</a></li>
               <li><a href="#" class="form-filter1 one"> По названию</a></li>
               <li class="form-filter1 filter-space">
@@ -136,7 +137,7 @@
           </div>
           <section class="catalog-lists">
             <ul class="lists reset-list">
-              <li class="item-catalog">
+              <li class="item-catalog" tabindex="0">
                 <div class="group-catalog">
                   <img src="img/img-sedona-1.jpg" width="359" height="578" alt="макет веб сайта седона ">
                 </div>
@@ -154,7 +155,7 @@
                   <img src="img/gray-top-catalog.svg" width="360" height="40" alt="gray-top-catalog">
                 </div>
               </li>
-              <li class="item-catalog">
+              <li class="item-catalog" tabindex="0">
                 <div class="group-catalog">
                   <img src="img/img-pink-1.jpg" width="358" height="578" alt="макет веб сайта пинк">
                 </div>
@@ -172,7 +173,7 @@
                   <img src="img/gray-top-catalog.svg" width="360" height="40" alt="gray-top-catalog">
                 </div>
               </li>
-              <li class="item-catalog">
+              <li class="item-catalog" tabindex="0">
                 <div class="group-catalog">
                   <img src="img/img-barbershop-1.jpg" width="358" height="578" alt="макет веб сайта барбершоп">
                 </div>
@@ -190,7 +191,7 @@
                   <img src="img/gray-top-catalog.svg" width="360" height="40" alt="gray-top-catalog">
                 </div>
               </li>
-              <li class="item-catalog">
+              <li class="item-catalog" tabindex="0">
                 <div class="group-catalog">
                   <img src="img/img-mishka-1.jpg" width="359" height="578" alt="макет веб сайта мишка">
                 </div>
@@ -208,7 +209,7 @@
                   <img src="img/gray-top-catalog.svg" width="360" height="40" alt="gray-top-catalog">
                 </div>
               </li>
-              <li class="item-catalog">
+              <li class="item-catalog" tabindex="0">
                 <div class="group-catalog">
                   <img src="img/img-aplus-1.jpg" width="359" height="578" alt="макет веб сайта а плюс">
                 </div>
@@ -226,7 +227,7 @@
                   <img src="img/gray-top-catalog.svg" width="360" height="40" alt="gray-top-catalog">
                 </div>
               </li>
-              <li class="item-catalog">
+              <li class="item-catalog" tabindex="0">
                 <div class="group-catalog">
                   <img src="img/img-kvast-1.jpg" width="359" height="578" alt="макет веб сайта кваст">
                 </div>
@@ -252,13 +253,13 @@
                 <a class="pagination-item-link active">1</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-item-link">2</a>
+                <a href="#" class="pagination-item-link">2</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-item-link">3</a>
+                <a href="#" class="pagination-item-link">3</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-item-link next" href="blank.html">Следующая</a>
+                <a href="#" class="pagination-item-link next">Следующая</a>
               </li>
             </ul>
           </section>
@@ -277,7 +278,7 @@
               ул. Б. Конюшенная, д. 19/8<br><br>
               тел.<a class="contacts-phone" href="tel:+78122757575"> +7 (812) 275-75-75</a>
             </p>
-            <a class="button-write" href="blank.html">Напишите нам</a>
+            <a class="button-write button-open" href="blank.html">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -285,17 +286,17 @@
         <div class="container">
           <ul class="reset-list icon">
             <li class="icon-list">
-              <a href="blank.html">
+              <a class="icon-list-link" href="blank.html">
               <img src="img/vk.svg" width="26" height="15" alt="VK">
               </a>
             </li>
             <li class="icon-list">
-              <a href="blank.html">
+              <a class="icon-list-link" href="blank.html">
               <img src="img/fb.svg" width="12" height="22" alt="FB">
               </a>
             </li>
             <li class="icon-list">
-              <a href="blank.html">
+              <a class="icon-list-link" href="blank.html">
               <img src="img/insta-icon.svg" width="21" height="21" alt="ist">
               </a>
             </li>
@@ -321,16 +322,17 @@
             </p>
             <p class="contact">
               <label for="contact-email">Ваш email:</label>
-              <input class="contact-text column-right" id="contact-email" type="text" name="email" placeholder="email@example.com ">
+              <input class="contact-text column-right" id="contact-email" type="email" name="email" placeholder="email@example.com ">
             </p>
           </div>
           <p class="contact">
             <label for="contact-letter">Текст письма:</label>
             <textarea class="contact-text contact-letter" id="contact-letter"  name="letter" placeholder="В свободной форме"></textarea>
           </p>
-          <button class="button button-send" type="submit">Отправить</button>
+          <button class="button button-send button-close" type="submit">Отправить</button>
         </div>
       </form>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
