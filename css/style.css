@@ -32,6 +32,7 @@
 --btn-active: rgba(0, 1, 1, 0.1);
 --basic-bar: rgba(0, 255, 0, 0.3);
 }
+
 .visually-hidden {
 position: absolute;
 width: 1px;
