@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Анна](https://up.htmlacademy.ru/htmlcss/30/user/1642989).
-* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad0v0).
+
 
 ---
 
